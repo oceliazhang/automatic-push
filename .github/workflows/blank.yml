@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   schedule: 
     # 代表国际标准时间4点0分，北京时间需要+8小时，代表北京时间中午12点运行
-    - cron: '10 5 * * *'
+    - cron: '20 5 * * *'
 jobs:
 #将工作流程中运行的所有作业组合在一起
   build:
@@ -25,4 +25,4 @@ jobs:
           pip3 install -r config.txt
       - name: automatic-push
         run: |
-          python3 main.py
+          python ./main.py
